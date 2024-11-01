@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kos Kuy - Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="header">
+                <div class="logo-wrapper">
+                    <a href="#" class="back-arrow">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h1 class="logo">
+                        <span class="kos">Kos</span> <span class="kuy">Kuy</span>
+                    </h1>
+                </div>
+            </div>
+            <p class="login-header">Login to continue</p>
+            <form>
+                <div class="form-group">
+                    <label for="email">Enter your email address</label>
+                    <input type="email" id="email" placeholder="yourmail@gmail.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Enter your Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <i class="bi bi-eye-slash toggle-password" id="togglePassword"></i>
+                    </div>
+                </div>
+                
+                <a href="#" class="forgot-password">Forget Password?</a>
+                <button type="submit" class="login-button">Log in</button>
+                <p class="signup-prompt">Belum punya akun Kos Kuy? <a href="daftar.html" class="signup-link">Daftar sekarang</a></p>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="image/aset1.jpg" alt="Illustration">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
