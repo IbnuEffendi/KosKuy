@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kos Kuy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img alt="Logo with a house icon" height="40" src="image/asep2.jpeg" width="40"/>
+            <span class="black">KOS</span>
+            <span class="orange">KUY</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Kost You Want"/>
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <a class="dropdown" href="#">Cari Apa? <i class="fas fa-caret-down"></i></a>
+            <a href="#">Pusat Bantuan</a>
+        </div>
+        <a class="login-button" href="#">Masuk</a>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a>
+        <span class="separator">/</span>
+        <a href="#">Menu</a>
+    </div>
+    <div class="container">
+        <aside class="filter">
+          <h3>FILTER</h3>
+          <hr class="divider">
+          <div class="filter-section">
+            <h4>Area</h4>
+            <hr class="divider">
+            <select>
+            <i class="bi bi-caret-down-fill"></i>
+              <option>Denpasar</option>
+              <option>Badung</option>
+              <option>Karangasem</option>
+              <option>Bangli</option>
+              <option>Buleleng</option>
+              <option>Tabanan</option>
+              <option>Gianyar</option>
+
+            </select>
+          </div>
+          <div class="filter-section">
+            <hr class="divider">
+            <h4>Harga</h4>
+            <input type="text" placeholder="1.000.000">
+            <h4>To</h4>
+            <input type="text" placeholder="1.000.000">
+          </div>
+          <div class="filter-section">
+            <hr class="divider">
+            <h4>Fasilitas Kamar</h4>
+            <label><input type="checkbox"> 3 X 4 M</label>
+            <label><input type="checkbox"> Kasur</label>
+            <label><input type="checkbox"> Lemari </label>
+            <label><input type="checkbox"> Meja</label>
+            <label><input type="checkbox"> Kamar Mandi</label>
+          </div>
+          <div class="filter-section">
+            <hr class="divider">
+            <h4>Fasilitas Kos</h4>
+            <label><input type="checkbox"> Laundry</label>
+            <label><input type="checkbox"> Parkiran</label>
+            <label><input type="checkbox"> Wi-Fi</label>
+            <label><input type="checkbox"> Listrik</label>
+            <label><input type="checkbox"> Gym</label>
+          </div>
+        </aside>
+      
+        <main class="listing-container">
+          <div class="sorting">
+            <label for="sort">Urutan</label>
+            <select id="sort">
+              <option>Rating Terbaik</option>
+              <option>Rekomendasi</option>
+              <option>Harga Termurah</option>
+              <option>Jarak terdekat</option>
+            </select>
+          </div>
+      
+          <div class="listing">
+            <div class="listing-item">
+              <img src="image/satset1.jpg" alt="Kos Wardani">
+              <div class="details">
+                <h4>Kos Wardani, Sesetan, Denpasar Barat</h4>
+                <div class="location">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span>Jl. Raya Sesetan, No.12</span>
+                </div>
+                <hr class="divider2">
+                <p>Khusus Putra, Toilet Dalam, AC</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><span>4.5</span>
+                </div>
+                <div class="price">
+                  Rp 1.000.000 <span>/bulan</span>
+                </div>
+              </div>
+              <a class="sewa-btn" href="#">Sewa</a>
+            </div>
+            
+            <div class="listing">
+              <div class="listing-item">
+                <img src="image/satset1.jpg" alt="Kos Wardani">
+                <div class="details">
+                  <h4>Kos Wardani, Sesetan, Denpasar Barat</h4>
+                  <div class="location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Jl. Raya Sesetan, No.12</span>
+                  </div>
+                  <hr class="divider2">
+                  <p>Khusus Putra, Toilet Dalam, AC</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i><span>4.5</span>
+                  </div>
+                  <div class="price">
+                    Rp 1.000.000 <span>/bulan</span>
+                  </div>
+                </div>
+                <a class="sewa-btn" href="#">Sewa</a>
+              </div>
+              <div class="listing">
+                <div class="listing-item">
+                  <img src="image/satset1.jpg" alt="Kos Wardani">
+                  <div class="details">
+                    <h4>Kos Wardani, Sesetan, Denpasar Barat</h4>
+                    <div class="location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <span>Jl. Raya Sesetan, No.12</span>
+                    </div>
+                    <hr class="divider2">
+                    <p>Khusus Putra, Toilet Dalam, AC</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><span>4.5</span>
+                    </div>
+                    <div class="price">
+                      Rp 1.000.000 <span>/bulan</span>
+                    </div>
+                  </div>
+                  <a class="sewa-btn" href="#">Sewa</a>
+                </div>
+                <div class="listing">
+                  <div class="listing-item">
+                    <img src="image/satset1.jpg" alt="Kos Wardani">
+                    <div class="details">
+                      <h4>Kos Wardani, Sesetan, Denpasar Barat</h4>
+                      <div class="location">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Jl. Raya Sesetan, No.12</span>
+                      </div>
+                      <hr class="divider2">
+                      <p>Khusus Putra, Toilet Dalam, AC</p>
+                      <div class="rating">
+                        <i class="fas fa-star"></i><span>4.5</span>
+                      </div>
+                      <div class="price">
+                        Rp 1.000.000 <span>/bulan</span>
+                      </div>
+                    </div>
+                    <a class="sewa-btn" href="#">Sewa</a>
+                  </div>
+                  <div class="listing">
+                    <div class="listing-item">
+                      <img src="image/satset1.jpg" alt="Kos Wardani">
+                      <div class="details">
+                        <h4>Kos Wardani, Sesetan, Denpasar Barat</h4>
+                        <div class="location">
+                          <i class="bi bi-geo-alt-fill"></i>
+                          <span>Jl. Raya Sesetan, No.12</span>
+                        </div>
+                        <hr class="divider2">
+                        <p>Khusus Putra, Toilet Dalam, AC</p>
+                        <div class="rating">
+                          <i class="fas fa-star"></i><span>4.5</span>
+                        </div>
+                        <div class="price">
+                          Rp 1.000.000 <span>/bulan</span>
+                        </div>
+                      </div>
+                      <a class="sewa-btn" href="#">Sewa</a>
+                    </div>
+          <div class="pagination">
+            <a href="#"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">...</a>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </main>
+      </div>
+      
+      <footer>
+        <div class="footers">
+          <div class="sec about">
+            <h2>About Us</h2>
+            <p>Kos Kuy, temukan kos idamanmu dengan mudah, cepat, dan terpercaya hunian nyaman hanya sekali klik!</p>
+            <ul class="sci">
+              <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+              <li><a href="#"><i class="bi bi-github"></i></a></li>
+              <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+            </ul>
+          </div>
+          <div class="sec quicklinks">
+            <h2>Kos Kuy</h2>
+            <hr class="divider3">
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Promosikan Kos Anda</a></li>
+              <li><a href="#">Blog Kos Kuy</a></li>
+              <li><a href="#">Pusat Bantuan</a></li>
+            </ul>
+          </div>
+          <div class="sec quicklinks">
+            <h2>Kebijakan</h2>
+            <hr class="divider3">
+            <ul>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat dan Ketentuan Umum</a></li>
+            </ul>
+          </div>
+          <div class="sec contact">
+            <h2>Kontak</h2>
+            <hr class="divider3">
+            <ul class="info">
+              <li>
+                <a href="tel:+6281234567890">
+                  <i class="bi bi-telephone"></i>
+                  <span>+62 812 3456 7890</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:Koskuy@Gmail.com">
+                  <i class="bi bi-envelope"></i>
+                  <span>Koskuy@Gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <hr class="divider4">
+          <p>© 2024 Koskuy.com. All rights reserved.</p>
+        </div>
+      </footer>
+      
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
