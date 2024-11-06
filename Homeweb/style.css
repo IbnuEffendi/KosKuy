@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+header {
+  display: flex; /* Menggunakan flexbox untuk layout */
+  align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
+  justify-content: space-between; /* Menyebar konten dengan ruang di antara logo dan menu */
+}
+
+header .logo {
+  /* Style untuk logo */
+  margin-right: auto; /* Memastikan logo tetap di kiri */
+}
+
+header nav {
+  display: flex; /* Menggunakan flexbox untuk menu */
+}
+
+header nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+  margin-left: 20 ; /* Menambahkan jarak antar item menu */
+}
+
+/* Efek hover pada menu */
+header nav a:hover {
+  color: #F7941E;
+}
+
+/* Garis bawah oranye di bawah menu saat hover */
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #F7941E;
+  transition: width 0.3s;
+}
+
+/* Memperluas garis di bawah menu saat di-hover atau diklik */
+header nav a:hover::after,
+header nav a:active::after {
+  width: 100%;
+}
+
+/* Style untuk tombol Masuk */
+header nav .login {
+  background-color: #fff; /* Mengubah latar belakang menjadi putih */
+  color: #F7941E; /* Warna tulisan oranye */
+  border: 1px solid #F7941E; /* Border oranye */
+  padding: 10px 15px; /* Menambahkan padding agar tombol terlihat lebih besar */
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1em; /* Menyesuaikan ukuran font agar sama dengan tombol kategori */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  position: relative;
+  margin-left: 20px; /* Menambahkan jarak antara tombol Masuk dan menu */
+}
+
+/* Efek hover pada tombol Masuk */
+header nav .login:hover {
+  background-color: #F7941E; /* Mengubah latar belakang menjadi oranye saat hover */
+  color: #fff; /* Mengubah warna tulisan menjadi putih saat hover */
+}
+
+/* Garis oranye di bawah tombol Masuk */
+header nav .login::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #F7941E;
+  transition: width 0.3s;
+}
+
+/* Garis oranye muncul penuh saat hover atau aktif di tombol Masuk */
+header nav .login:hover::after,
+header nav .login:active::after {
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 90px;
+  margin-right: 2px;
+}
+
+.logo strong {
+  color: #F7941E;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav .login {
+  padding: 8px 16px;
+  background-color: #F7941E;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 10%;
+  background-color: #fff;
+}
+
+.text-section {
+  max-width: 50%;
+}
+
+.text-section h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.text-section p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Style untuk search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Style untuk container input dan ikon */
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex: 1;
+}
+
+.search-icon {
+  color: #F7941E;
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+/* Style untuk input text */
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  color: #333;
+}
+
+/* Style untuk tombol search */
+.search-button {
+  background-color: #F7941E;
+  color: #fff;
+  border: none;
+  padding:  10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50px; /* Mengubah border-radius menjadi 50px untuk membuatnya oval */
+
+}
+
+/* Hover effect untuk tombol search */
+.search-button:hover {
+  background-color: #e07c0d;
+}
+
+
+
+.category-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.category-buttons button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px; /* Menyesuaikan padding agar tombol kategori lebih besar */
+  background-color: #fff;
+  border: 1px solid #F7941E; /* Border oranye */
+  border-radius: 5px;
+  color: #333;
+  font-size: 1em; /* Menyesuaikan ukuran font agar sama dengan tombol Masuk */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin: 0 5px; /* Menambahkan margin agar tombol kategori tidak terlalu berdekatan */
+}
+
+.category-buttons button i {
+  margin-right: 5px;
+  color: #F7941E;
+}
+
+.category-buttons button:hover {
+  background-color: #F7941E;
+  color: #fff;
+  border-color: #F7941E; /* Border tetap oranye saat di-hover */
+}
+
+/* Efek saat ditekan */
+.category-buttons button:active {
+  background-color: #F7941E;
+  color: #fff;
+  transform: scale(0.98);
+}
+/*HALAMAN EKSPLORE*/
+/*blkbsxdgcuihjsk*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.kos-section {
+  padding: 20px;
+  text-align: left; /* Teks sejajar ke kiri */
+  margin-left: 3px; /* Sesuaikan nilai ini untuk menyamakan dengan .text-section */
+}
+
+.kos-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #f7941E; 
+}
+
+.kos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.kos-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.kos-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.label {
+  background-color: #f7941E; 
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+}
+
+.kos-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.kos-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.location, .description, .price {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+  color: #f7941E; 
+  margin-top: 10px;
+}
+
+.btn-sewa {
+  background-color: #f7941E; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn-sewa:hover {
+  background-color: #e68a00;
+}
+
+.rating {
+  background-color: #f7941E; 
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

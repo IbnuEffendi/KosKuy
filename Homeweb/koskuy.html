@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kost Kuy</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">Kost<span>Kuy</span>.</a>
+        </div>
+
+        <!-- Search Bar Added in Navbar -->
+        <div class="nav__search">
+          <input type="text" placeholder="Cari lokasi, kos, atau lainnya..." />
+          <button type="submit">
+            <i class="ri-search-line"></i>
+          </button>
+        </div>
+
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#">Cari Apa?</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Eksplore</a></li>
+        <li><a href="#">Masuk</a></li>
+      </ul>
+
+      <div class="nav__btns">
+        <button class="btn sign__up">Sign Up</button>
+        <button class="btn sign__in">Sign In</button>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header__container">
+
+      <div class="header__content">
+        <h1><br />Membantu Temukan <span>Kos</span> Impianmu</h1>
+        <p>
+          Kos Kuy hadir untuk bantu temukan kos yang sesuai preferensi butget,
+          lokasi, dan fasilitas yang kamu inginkan, dengan dibantu oleh mitra -
+          mitra kami yang terpercaya.
+        </p>
+
+        <!-- Main Search Bar Section -->
+        <form action="/" class="main__search">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Destination</h5>
+              <div>
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="Paris, France" />
+              </div>
+            </div>
+            <div class="input__group">
+              <h5>Date</h5>
+              <div>
+                <span><i class="ri-calendar-2-line"></i></span>
+                <input type="text" placeholder="17 July 2024" />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="search__btn">Search</button>
+        </form>
+      </div>
+      <div class="header__image">
+        <!-- <div class="header__image__card header__image__card-1">
+          <span><i class="ri-key-line"></i></span>
+          Harga Gacor
+        </div> -->
+        <div class="header__image__card header__image__card-2">
+          <span><i class="ri-passport-line"></i></span>
+          Rekomendasi
+        </div>
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-map-2-line"></i></span>
+          Lokasi Gacor
+        </div>
+        <!-- <img src="assets/header.png" alt="header" /> -->
+      </div>
+      <div class="bar">
+        Copyright © 2024 Web Design Mastery. All rights reserved.
+      </div>
+    </header>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
