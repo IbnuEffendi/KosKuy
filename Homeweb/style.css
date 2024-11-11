@@ -103,9 +103,8 @@ header nav .login:active::after {
 
 .logo img {
   width: 90px;
-  margin-right: 2px;
+  margin-right: 0px;
 }
-
 .logo strong {
   color: #F7941E;
 }
@@ -134,7 +133,10 @@ nav .login {
   padding: 40px 10%;
   background-color: #fff;
 }
-
+.hero img {
+  width: 100%; /* Mengatur lebar gambar menjadi 50% dari lebar container */
+  height: auto; /* Mempertahankan rasio aspek */
+}
 .text-section {
   max-width: 50%;
 }
@@ -245,118 +247,618 @@ nav .login {
 }
 /*HALAMAN EKSPLORE*/
 /*blkbsxdgcuihjsk*/
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.kos-section {
-  padding: 20px;
-  text-align: left; /* Teks sejajar ke kiri */
-  margin-left: 3px; /* Sesuaikan nilai ini untuk menyamakan dengan .text-section */
 }
 
 .kos-section h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Mengatur posisi ke kiri */
   font-size: 24px;
   color: #333;
-  margin-bottom: 20px;
+  margin-left: 20px; /* Menambahkan padding kiri agar lebih rapi */
+}
+/* Menu Dropdown */
+
+.search-container {
+  display: flex;
+  margin-bottom: 10px; /* Jarak antara search bar dan dropdown */
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1; /* Membuat input mengisi ruang yang tersedia */
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #F7941E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.kos-section {
+  position: relative; /* Agar dropdown menu bisa diposisikan relatif terhadap section */
+}
+
+
+
+.kos-section {
+  position: relative; /* Agar dropdown bisa diposisikan relatif terhadap section ini */
+}
+
+.dropdown-link {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ff7b00; /* Warna teks */
+  text-decoration: none; /* Tanpa garis bawah */
+  font-weight: bold; /* Teks tebal */
+  margin-left: 5px; /* Jarak kiri */
+}
+
+.dropdown-menu {
+  display: none; /* Sembunyikan dropdown secara default */
+  position: absolute; /* Posisi absolut */
+  top: 100%; /* Tempatkan di bawah link dropdown */
+  left: 0; /* Rata kiri dengan dropdown link */
+  margin-left: 350px; /* Geser dropdown sedikit ke kanan */
+  background-color: white; /* Warna latar belakang */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  border-radius: 5px; /* Sudut membulat */
+  min-width: 120px; /* Lebar minimum untuk dropdown */
+  z-index: 10; /* Pastikan muncul di atas elemen lain */
+  list-style-type: none; /* Tanpa bullet points */
+  padding: 5px 0; /* Padding untuk dropdown */
+}
+
+.dropdown-menu li {
+  padding: 8px 10px; /* Padding untuk item list */
+  cursor: pointer; /* Tangan saat hover */
+  font-size: 14px; /* Ukuran font lebih kecil */
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0; /* Efek hover */
+}
+
+/* Menampilkan dropdown ketika hover */
+.dropdown-link:hover + .dropdown-menu {
+  display: block; /* Tampilkan dropdown saat hover pada link */
+}
+
+/* Styling Dropdown Arrow */
+.dropdown-link i {
+  transition: transform 0.3s ease;
+}
+
+/* Menu Utama */
+header nav a {
+  margin-left: 20px; /* Menambahkan jarak antar item menu */
+  padding: 10px 15px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+/* Efek Hover pada Menu Utama */
+header nav a:hover {
+  color: #fff;
+  background-color: #F7941E;
+}
+
+/* Menambahkan efek dropdown saat klik */
+header nav a:active {
+  transform: scale(0.98);
+}
+
+/* Tombol Masuk */
+header nav .login {
+  padding: 8px 16px;
+  background-color: #F7941E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+header nav .login:hover {
+  background-color: #E66C00;
+}
+
+header nav .login:active {
+  transform: scale(0.98);
+}
+
+/* Tambahan untuk efek garis bawah pada menu */
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #F7941E;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+header nav a:active::after {
+  width: 100%;
 }
 
 .highlight {
-  color: #f7941E; 
+  color: #ff7b00; /* Warna oranye */
+  font-weight: bold;
 }
+
+.dropdown-link {
+  display: inline-flex;
+  align-items: center;
+  color: #ff7b00;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.dropdown-link:hover .highlight {
+  text-decoration: underline;
+}
+
+.dropdown-link i {
+  font-size: 14px;
+  color: #ff7b00;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.dropdown-link:hover i {
+  transform: rotate(180deg);
+}
+
 
 .kos-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .kos-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  position: relative;
+  width: 350px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s;
+} 
+
+.kos-card:hover {
+  transform: translateY(-5px);
 }
 
-.kos-card img {
-  width: 100%;
-  height: 180px;
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width:100%;
+  height: 200px;
   object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+/*buat cek rekommendasinya yang ini*/
+.label { 
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  background-color: #ff7b00;
+  color: white;
+  padding: 5px 15px 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
-.label {
-  background-color: #f7941E; 
-  color: #fff;
-  font-size: 14px;
-  padding: 5px 10px;
+.label::before {
+  content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  border-radius: 4px;
+  left: -10px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #ff7b00;
+}
+
+.label i {
+  margin-right: 5px;
 }
 
 .kos-info {
+  padding-top: 20px;
   padding: 15px;
   text-align: left;
+  position: relative;
 }
 
 .kos-info h3 {
   font-size: 18px;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.location, .description, .price {
-  font-size: 14px;
-  margin: 5px 0;
-  color: #666;
-}
-
-.price {
+  margin: 0px 0 5px;
   font-weight: bold;
-  color: #f7941E; 
-  margin-top: 10px;
 }
 
-.btn-sewa {
-  background-color: #f7941E; 
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 100%;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
+.location {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
 }
 
-.btn-sewa:hover {
-  background-color: #e68a00;
+.location i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #000301;
+}
+
+.description {
+  font-size: 10px;
+  color: #777;
+  margin: 5px 0;
+}
+/*harga*/
+.price {
+  font-size: 15px;
+  color: #ff7b00;
+  font-weight: bold;
+  margin: 10px 0;
+  position: relative; /* Mengatur posisi relatif */
+  top: -10px;
 }
 
 .rating {
-  background-color: #f7941E; 
-  color: #fff;
-  border-radius: 50%;
-  padding: 8px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 15px;
+  color: #ff7b00;
   font-size: 14px;
-  width: 32px;
-  height: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.rating i {
+  top: 8px;
+  margin-right: 5px;
+  color: #ff7b00;
+}
+/*buat sewa tombol*/
+.btn-sewa {
+  background-color: #ff7b00;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 20%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+  margin-top: 10px;
+  float: right;
+  margin-top: -55px;
+  position: relative; /* Ensure it is positioned relative */
+  z-index: 20; /* Set a higher z-index */
+}
+
+.btn-sewa:hover {
+  background-color: #e66c00;
+}
+/*section 2 buat promo*/
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* Highlighted city style */
+.highlight {
+  color: #e66c00; /* Change this to your preferred highlight color */
+  font-weight: bold;
+}
+
+
+
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position it absolutely */
+  background-color: white; /* Background color */
+  border: 1px solid #ccc; /* Border around the dropdown */
+  z-index: 1; /* Ensure it appears above other elements */
+  width: 200px; /* Set a width for the dropdown */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Show dropdown when hovering over the anchor (optional) */
+.dropdown-menu li {
+  padding: 10px; /* Padding for each item */
+}
+
+.dropdown-menu li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color */
+  display: block; /* Make the link fill the entire list item */
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0; /* Change background on hover */
+}
+
+/* Show dropdown when the parent is hovered (optional) */
+a:hover + .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Style for the dropdown trigger */
+a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  position: relative; /* Position relative for dropdown positioning */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Additional styling for the button */
+.btn-sewa {
+  background-color: #e07c0d; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.btn-sewa:hover {
+  background-color: #e07c0d; /* Darker green on hover */
+}
+/*image 2*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.kos-section {
+  margin-bottom: 20px;
+  position: relative; /* Allow dropdown to position absolutely */
+}
+
+.dropdown-link2 {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ff7b00;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.dropdown-menu2 {
+  display: none; /* Initially hide the dropdown */
+  position: absolute; /* Position it absolutely */
+  top: 100%; /* Position below the dropdown link */
+  left: 350px; /* Align to the left of the dropdown link */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 5px; /* Rounded corners */
+  min-width: 120px; /* Set a minimum width for the dropdown */
+  z-index: 10; /* Ensure it appears above other elements */
+  list-style-type: none;
+  padding: 5px 0; /* Padding for the dropdown */
+}
+
+.dropdown-menu2 li {
+  padding: 8px 10px; /* Padding for list items */
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+}
+
+.dropdown-menu2 li:hover {
+  background-color: #f0f0f0; /* Hover effect */
+}
+
+.highlight {
+  color: #ff7b00;
+  font-weight: bold;
+}
+
+/*menu geser*/
+.carousel-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.carousel {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  position: relative;
+  width: 250px; /* Ukuran default item */
+  height: 180px;
+  margin: 0 15px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.carousel-item span {
+  position: absolute;
+  top: 50%;  /* Menempatkan teks di tengah secara vertikal */
+  left: 50%; /* Menempatkan teks di tengah secara horizontal */
+  transform: translate(-50%, -50%); /* Memindahkan teks agar benar-benar di tengah */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Efek untuk gambar tengah (tidak blur dan lebih besar) */
+.carousel-item.active {
+  transform: scale(1.3); /* Lebih besar */
+}
+
+.carousel-item.active img {
+  filter: none;
+}
+
+/* Efek untuk gambar di samping (blur dan lebih kecil) */
+.carousel-item:not(.active) {
+  transform: scale(0.8); /* Ukuran lebih kecil */
+}
+
+.carousel-item:not(.active) img {
+  filter: blur(4px);
+}
+
+/* Kontrol tombol */
+.carousel-control {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #F7941E;
+  z-index: 1;
+  margin: 0 10px;
+}
+
+/*css komentar*/
+.faq-section {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.faq-item {
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Meningkatkan margin bawah */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  padding: 10px; /* Menambahkan padding di luar box */
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.faq-question {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  padding: 25px 30px; /* Menambah padding untuk memperbesar box */
+  font-size: 18px; /* Meningkatkan ukuran font */
+  font-weight: 600;
+  text-align: left;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+
+.faq-question:hover {
+  background-color: #ebebeb;
+}
+
+.faq-answer {
+  padding: 20px 30px; /* Menambah padding untuk memperbesar box */
+  font-size: 16px; /* Meningkatkan ukuran font */
+  line-height: 1.6;
+  color: #555;
+  display: none;
+  background-color: #fff;
+  border-top: 1px solid #d3d3d3;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  font-size: 20px;
+  color: #999;
+  transition: transform 0.3s ease;
+}
+

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kos Kuy</title>
     <link rel="stylesheet" href="style.css">
+    <script src="web.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Link Font Awesome untuk ikon lokasi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -49,53 +51,249 @@
 
             <!-- Image Section -->
             <div class="image-section">
-                <img src="house.jpg" alt="House Image"> <!-- Sesuaikan path gambar -->
+                <img src="Coliving.jpg" alt="House Image"> <!-- Sesuaikan path gambar -->
             </div>
         </div>
 
-        <!-- Kos Section -->
+        <!-- Kos Section 1-->
         <section class="kos-section">
-            <h2>Kos Kuy yang lagi populer di <span class="highlight">Semua Kota</span></h2>
-            <div class="kos-container">
-                <div class="kos-card">
-                    <img src="img/kos1.jpg" alt="Kos Sesetan Home">
-                    <div class="label">Rekomendasi</div>
-                    <div class="kos-info">
-                        <h3>Kos Sesetan Home</h3>
-                        <p class="location">Jl. Raya Sesetan No. 1, Denpasar</p>
-                        <p class="description">Khusus Putra, Kamar Mandi Dalam, Dapur Dalam</p>
-                        <p class="price">Rp 1.700.000/bulan</p>
-                        <button class="btn-sewa">Sewa</button>
-                    </div>
-                    <div class="rating">4.5</div>
-                </div>
-                <div class="kos-card">
-                    <img src="img/kos2.jpg" alt="Kos Jimbaran Home">
-                    <div class="label">Rekomendasi</div>
-                    <div class="kos-info">
-                        <h3>Kos Jimbaran Home</h3>
-                        <p class="location">Jl. Raya Jimbaran No. 12, Denpasar</p>
-                        <p class="description">Khusus Putri, Kamar Mandi Dalam, Dapur Dalam</p>
-                        <p class="price">Rp 1.800.000/bulan</p>
-                        <button class="btn-sewa">Sewa</button>
-                    </div>
-                    <div class="rating">4.6</div>
-                </div>
-                <div class="kos-card">
-                    <img src="img/kos1.jpg" alt="Kos Sesetan Home">
-                    <div class="label">Rekomendasi</div>
-                    <div class="kos-info">
-                        <h3>Kos Sesetan Home</h3>
- <p class="location">Jl. Raya Sesetan No. 1, Denpasar</p>
-                        <p class="description">Khusus Putra, Kamar Mandi Dalam, Dapur Dalam</p>
-                        <p class="price">Rp 1.700.000/bulan</p>
-                        <button class="btn-sewa">Sewa</button>
-                    </div>
-                    <div class="rating">4.5</div>
-                </div>
-                <!-- Tambahkan card lainnya sesuai kebutuhan -->
-            </div>
+        
+            <section class="kos-section">
+                <h2>
+                    Kos <span class="highlight">Kuy</span> yang lagi populer di 
+                    <a href="#" class="dropdown-link">
+                        <span class="highlight">Semua Kota</span>
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                </h2>
+                <!-- Dropdown Menu -->
+                <ul class="dropdown-menu">
+                    <li><a href="#">Badung</a></li>
+                    <li><a href="#">Gianyar</a></li>
+                    <li><a href="#">Klungkung</a></li>
+                    <li><a href="#">Karangasem</a></li>
+                    <li><a href="#">Singaraja</a></li>
+                    <li><a href="#">Denpasar</a></li>
+                </ul>
+            </section>
+        
+            <script src="script.js"></script>
         </section>
-    </main>
-</body>
-</html>
+        
+            <!-- Kos Container Code -->
+<!-- Kos Container Code 1-->
+<div class="kos-container">
+    <div class="kos-card">
+        <div class="image-container">
+            <img src="nau kamar.jpg" alt="Kos Sesetan Home">
+            <div class="label"><i class="fas fa-star"></i> Rekomendasi</div>
+        </div>
+        <div class="kos-info">
+            <h3>Kos Sesetan Home</h3>
+            <div class="location-rating">
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Jl. Raya Sesetan No. 1, Denpasar
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i> 4.5
+                </div>
+            </div>
+            <p class="description">Khusus Putra, Kamar Mandi Dalam, Dapur Dalam</p>
+            <p class="price">Rp 1.700.000/bulan</p>
+            <button class="btn-sewa">Sewa</button>
+        </div>
+    </div>
+    
+    <!-- Dua Kos Card Tambahan -->
+    <div class="kos-card">
+        <div class="image-container">
+            <img src="sunbox.jpg" alt="Kos Jimbaran Home">
+            <div class="label"><i class="fas fa-star"></i> Rekomendasi</div>
+        </div>
+        <div class="kos-info">
+            <h3>Kos Jimbaran Home</h3>
+            <div class="location-rating">
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Jl. Raya Jimbaran No. 12, Denpasar
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i> 4.6
+                </div>
+            </div>
+            <p class="description">Khusus Putri, Kamar Mandi Dalam, Dapur Dalam</p>
+            <p class="price">Rp 1.800.000/bulan</p>
+            <button class="btn-sewa">Sewa</button>
+        </div>
+    </div>
+    
+    <div class="kos-card">
+        <div class="image-container">
+            <img src="Samana Residence.jpg" alt="Kos Bali Home">
+            <div class="label"><i class="fas fa-star"></i> Rekomendasi</div>
+        </div>
+        <div class="kos-info">
+            <h3>Kos Bali Home</h3>
+            <div class="location-rating">
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Jl. Bali No. 8, Denpasar
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i> 4.7
+                </div>
+            </div>
+            <p class="description">Khusus Campuran, Kamar Mandi Dalam, Wi-Fi</p>
+            <p class="price">Rp 1.900.000/bulan</p>
+            <button class="btn-sewa">Sewa</button>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Kos Container Code untuk Section Baru -->
+    <section class="kos-section">
+        
+        <section class="kos-section">
+            <h2>
+                Kos <span class="highlight">Kuy</span>yang lagi promo di 
+                <a href="#" class="dropdown-link2">
+                    <span class="highlight" id="selected-city">Kota</span>
+                    <i class="fas fa-caret-down"></i>
+                </a>
+            </h2>
+                <!-- Dropdown Menu -->
+                <ul class="dropdown-menu2">
+                    <li><a href="#" onclick="changeCity('Badung')">Badung</a></li>
+                    <li><a href="#" onclick="changeCity('Gianyar')">Gianyar</a></li>
+                    <li><a href="#" onclick="changeCity('Klungkung')">Klungkung</a></li>
+                    <li><a href="#" onclick="changeCity('Karangasem')">Karangasem</a></li>
+                    <li><a href="#" onclick="changeCity('Singaraja')">Singaraja</a></li>
+                    <li><a href="#" onclick="changeCity('Denpasar')">Denpasar</a></li>
+                </ul>
+        </section>
+<div class="kos-container">
+    <div class="kos-card">
+        <div class="image-container">
+            <img src="Coliving.jpg" alt="Kos 1">
+            <!-- Tidak ada label rekomendasi -->
+        </div>
+        <div class="kos-info">
+            <h3>Kos 1</h3>
+            <div class="location-rating">
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Jl. Contoh Alamat No. 1, Denpasar
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i> 4.0
+                </div>
+            </div>
+            <p class="description">Khusus Campuran, Kamar Mandi Dalam</p>
+            <p class="price">Rp 1.500.000/bulan</p>
+            <button class="btn-sewa">Sewa</button>
+        </div>
+    </div>
+
+    <div class="kos-card">
+        <div class="image-container">
+            <img src="NAU LIVING.jpg" alt="Kos 2">
+            <!-- Tidak ada label rekomendasi -->
+        </div>
+        <div class="kos-info">
+            <h3>Kos 2</h3>
+            <div class="location-rating">
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Jl. Contoh Alamat No. 2, Denpasar
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i> 4.2
+                </div>
+            </div>
+            <p class="description">Khusus Putra, Kamar Mandi Bersama</p>
+            <p class="price">Rp 1.600.000/bulan</p>
+            <button class="btn-sewa">Sewa</button>
+        </div>
+    </div>
+
+    <div class="kos-card">
+        <div class="image-container">
+            <img src="GrahaVidyan.jpg" alt="Kos 3">
+            <!-- Tidak ada label rekomendasi -->
+        </div>
+        <div class="kos-info">
+            <h3>Kos 3</h3>
+            <div class="location-rating">
+                <p class="location">
+                    <i class="fas fa-map-marker-alt"></i> Jl. Contoh Alamat No. 3, Denpasar
+                </p>
+                <div class="rating">
+                    <i class="fas fa-star"></i> 4.1
+                </div>
+            </div>
+            <p class="description">Khusus Putri, Kamar Mandi Dalam, Dapur Bersama</p>
+            <p class="price">Rp 1.700.000/bulan</p>
+            <button class="btn-sewa">Sewa</button>
+        </div>
+    </div>
+    <div class="carousel-container">
+  <h2>Area Kos <span class="highlight">Kuy</span> Terpopuler</h2>
+  <div class="carousel">
+    <button class="carousel-control left" onclick="moveCarousel(-1)">&#9664;</button>
+    <div class="carousel-track">
+      <div class="carousel-item active"><img src="GrahaVidyan.jpg" alt="Denpasar"><span>DENPASAR</span></div>
+      <div class="carousel-item"><img src="Samana Residence.jpg" alt="Gianyar"><span>GIANYAR</span></div>
+      <div class="carousel-item"><img src="NAU LIVING.jpg" alt="Badung"><span>BADUNG</span></div>
+    </div>
+    <button class="carousel-control right" onclick="moveCarousel(1)">&#9654;</button>
+  </div>
+  
+  <!--komentar-->
+  
+<div class="faq-section">
+    <h2>Pertanyaan yang sering ditanyain.</h2>
+  
+    <div class="faq-item">
+      <button class="faq-question">
+        BANG TOILETNYA ADA SIGMA SKIBIDNYA GA?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Wah, kalau toilet skibidinya sih emang langka banget! Denger-denger, toilet skibidi itu cuma ada di alam semesta paralel, khusus buat orang-orang yang mau joget sambil duduk. Jadi, kalau kamu nemu toilet yang tiba-tiba ngajak joget, hati-hati aja, bisa jadi kamu udah masuk dimensi skibidi tanpa sadar!
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">
+        BANG IBNU PUNYA PACAR GA DIA?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Jawabannya ada di hati masing-masing.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">
+        BANG EKA PUNYA PACAR GA DIA?
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        Mungkin iya, mungkin juga tidak. Kita serahkan pada takdir.
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.querySelectorAll('.faq-question').forEach((item) => {
+      item.addEventListener('click', function () {
+        const faqItem = this.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+  </script>
+  
+  
+</div>
+
+
+        
