@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <a href="#" class="sidebar-brand-link">
+          <i class="ri-user-smile-fill sidebar-brand-link-icon"></i>
+          <span class="sidebar-brand-link-text">AdminKoskuy</span>
+        </a>
+      </div>
+      <div class="sidebar-menu-wrapper">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item active">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-dashboard-2-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-store-2-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">My Store</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-bar-chart-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">Analytics</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-chat-1-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">Message</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-group-3-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">Team</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item sidebar-menu-item-bottom">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-settings-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">Settings</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item sidebar-menu-item-danger">
+            <a href="#" class="sidebar-menu-item-link">
+              <i class="ri-logout-circle-line sidebar-menu-item-link-icon"></i>
+              <span class="sidebar-menu-item-link-text">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <button type="button" class="topbar-toggle" data-toggle="sidebar">
+          <i class="ri-menu-2-line"></i>
+        </button>
+        <form action="" class="topbar-search-form topbar-search-form-desktop">
+          <input
+            type="text"
+            class="topbar-search-form-control"
+            placeholder="Search..."
+          />
+          <button type="submit" class="topbar-search-form-submit">
+            <i class="ri-search-line"></i>
+          </button>
+        </form>
+        <ul class="topbar-menu">
+          <li class="topbar-menu-item topbar-menu-item-mobile">
+            <div class="dropdown">
+              <a href="#" class="topbar-menu-item-link" data-toggle="dropdown">
+                <i class="ri-search-line"></i>
+              </a>
+              <div class="dropdown-menu-wrapper dropdown-menu-wrapper-lg">
+                <div class="topbar-search-form-dropdown">
+                  <form action="" class="topbar-search-form">
+                    <input
+                      type="text"
+                      class="topbar-search-form-control" placeholder="Search..."/>
+                    <button type="submit" class="topbar-search-form-submit">
+                      <i class="ri-search-line"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="topbar-menu-item">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="topbar-menu-item-link topbar-menu-item-link-notification"
+                data-toggle="dropdown">
+                <i class="ri-notification-3-line"></i>
+                <span class="topbar-menu-item-link-notification-total">8</span>
+              </a>
+              <div class="dropdown-menu-wrapper">
+                <p class="topbar-notification-title">Notification</p>
+                <div class="topbar-notification-wrapper">
+                  <a href="#" class="topbar-notification-item">
+                    <span class="topbar-notification-item-icon">
+                      <i class="ri-history-line"></i>
+                    </span>
+                    <p class="topbar-notification-item-text">
+                      Kos Kebakaran ngab tolong dikit
+                    </p>
+                  </a>
+                  <a href="#" class="topbar-notification-item">
+                    <span class="topbar-notification-item-icon">
+                      <i class="ri-history-line"></i>
+                    </span>
+                    <p class="topbar-notification-item-text">
+                      woi kamar mandinya bocor tolong lah cok
+                    </p>
+                  </a>
+                  <a href="#" class="topbar-notification-item">
+                    <span class="topbar-notification-item-icon">
+                      <i class="ri-history-line"></i>
+                    </span>
+                    <p class="topbar-notification-item-text">
+                      woi mana makan siang yang kamu janjikan wok sini bawa
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="topbar-menu-item">
+            <div class="dropdown">
+              <a href="#" class="topbar-menu-item-link" data-toggle="dropdown">
+                <img
+                  src="image/profile.jpeg"
+                  alt=""
+                  class="topbar-menu-item-link-profile-image"
+                />
+              </a>
+              <div class="dropdown-menu-wrapper dropdown-menu-wrapper-sm">
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-menu-item">
+                    <i class="ri-user-line dropdown-menu-item-icon"></i>
+                    <span class="dropdown-menu-item-text">Profile</span>
+                  </a>
+                  <a href="#" class="dropdown-menu-item">
+                    <i class="ri-settings-line dropdown-menu-item-icon"></i>
+                    <span class="dropdown-menu-item-text">Settings</span>
+                  </a>
+                  <a href="#" class="dropdown-menu-item">
+                    <i
+                      class="ri-logout-circle-line dropdown-menu-item-icon"
+                    ></i>
+                    <span class="dropdown-menu-item-text">Logout</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="profile-header">
+        <p>Profile</p>
+    </div>
+    <div class="profile-section">
+        <img src="image/profile.jpeg" alt="Profile Picture" class="profile-picture">
+        <div class="welcome-message">
+            <h2>Welcome back, Dinda Pramiswari 👋😊</h2>
+            <p>It’s Tuesday, 29 Oktober 2024</p>
+        </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search data pelanggan">
+      <button class="search-button">
+          <span class="icon-search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+      </button>
+  </div>
+    
+      <div class="content">
+        <div class="table-container">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ibnu EP ep</td>
+                <td>Active</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>eka hiler</td>
+                <td>Active</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Dinda ketua guilt ep ep</td>
+                <td>Inactive</td>
+                <td><a href="#"><button class="table-action-btn" >Edit</button></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
