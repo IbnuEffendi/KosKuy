@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <div class="step-indicator">
+          <div class="step active">
+              <div class="step-circle">1</div>
+              <span class="step-label">Travel Detail</span>
+          </div>
+          <div class="step">
+              <div class="step-circle">2</div>
+              <span class="step-label">Payment Detail</span>
+          </div>
+          <div class="step">
+              <div class="step-circle">3</div>
+              <span class="step-label">Order Processed</span>
+          </div>
+      </div>
+      
+        <h2>Detail Payment</h2>
+
+        <h3>Contact Detail</h3>
+        <div class="input-group row">
+            <div class="input-field">
+                <label>Email</label>
+                <input type="email" placeholder="Input email">
+            </div>
+            <div class="input-field">
+                <label>No Telepon</label>
+                <input type="text" placeholder="Input no telepon">
+            </div>
+        </div>
+        
+        <h3>Identitas</h3>
+        <div class="input-group row">
+          <div class="input-field">
+            <label for="first-name">Nama Depan:</label>
+            <input
+              type="text"
+              id="first-name"
+              placeholder="Masukkan nama depan Anda"
+            />
+          </div>
+          <div class="input-field">
+            <label for="last-name">Nama Belakang:</label>
+            <input
+              type="text"
+              id="last-name"
+              placeholder="Masukkan nama belakang Anda"
+            />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="address">Alamat:</label>
+          <textarea
+            id="address"
+            placeholder="Masukkan alamat Anda"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <h3>Kode Promo</h3>
+        <div class="promo-section">
+          <input type="text" placeholder="Input kode promo" />
+          <a href="#">Find Promo Code?</a>
+        </div>
+        <button class="next-button" onclick="nextStep()">Next</button>
+      </div>
+      <div class="summary-section">
+        <h3>Review Order Details</h3>
+        <div class="order-details">
+          <img src="https://via.placeholder.com/300x150" alt="Room Image" />
+          <div class="order-info">
+            <h4>KOS JIMBARAN DINDA AND IBNU</h4>
+            <p>⭐ 4.4</p>
+            <div class="date">
+              <span>29 Oktober 2024</span>
+              <span>30 hari</span>
+            </div>
+          </div>
+        </div>
+        <div class="price-summary">
+          <div><span>Admin fee</span><span>Rp. 15,000</span></div>
+          <div><span>Subtotal</span><span>Rp. 1,300,000</span></div>
+          <div class="total">
+            <span>Grand Total</span><span>Rp. 1,315,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
