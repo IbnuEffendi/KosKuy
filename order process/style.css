@@ -1,0 +1,338 @@
+/* ========================= */
+/* Basic Reset */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========================= */
+/* Body Styling */
+/* ========================= */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align top so content doesn't center vertically */
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* ========================= */
+/* Container Layout with Flexbox */
+/* ========================= */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/* ========================= */
+/* Step Indicator Styling */
+/* ========================= */
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between steps */
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #333;
+    font-size: 14px;
+}
+
+.step-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px; /* Space between number circle and text */
+}
+
+.step-label {
+    position: relative;
+    color: #333;
+}
+
+.step.active .step-circle {
+    background-color: #ff7e1a; /* Orange background for active step */
+    color: white; /* White text for active step */
+}
+
+.step.active .step-label {
+    font-weight: bold;
+    color: #ff7e1a; /* Orange color for active text */
+}
+
+.step.active .step-label::after {
+    content: "";
+    display: block;
+    width: 100%; /* Full width underline */
+    height: 2px;
+    background-color: #ff7e1a; /* Orange underline */
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+/* ========================= */
+/* Connecting Line Between Steps */
+/* ========================= */
+.step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 60px; /* Adjust as needed for spacing */
+    height: 2px;
+    background-color: #ddd;
+    top: 50%;
+    left: 100%; /* Position the line to the right of the circle */
+    transform: translateY(-50%);
+    z-index: -1; /* Line behind the elements */
+}
+
+.step.active:not(:last-child)::after {
+    background-color: #ff7e1a;
+}
+
+/* ========================= */
+/* Flexbox Layout for Order Processed and Order Review Sections */
+/* ========================= */
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+/* ========================= */
+/* Order Processed Section */
+/* ========================= */
+.order-processed {
+    flex: 2;
+    background-color: #ffffff; /* Changed to white for a cleaner look */
+    padding: 30px; /* Increased padding for a more spacious feel */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.order-processed:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.order-processed h2,
+.order-processed h3 {
+    color: #333;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    font-size: 24px; /* Slightly larger font size */
+    font-family: 'Arial', sans-serif; /* Consistent font family */
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0; /* Increased margin for better separation */
+    font-size: 16px;
+    color: #555;
+    padding: 10px; /* Added padding for a better touch target */
+    border: 1px solid #ddd; /* Added border for visual separation */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.order-item:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #f97316;
+    font-size: 20px; /* Increased font size for emphasis */
+    margin-top: 25px; /* Increased margin for better spacing */
+}
+
+.confirmation-message {
+    margin-top: 30px; /* Increased margin for better spacing */
+    font-size: 22px; /* Slightly larger font size */
+    color: #4caf50;
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.confirm-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #f97316;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added box-shadow transition */
+    margin-top: 15px; /* Increased margin for better spacing */
+}
+
+.confirm-button:hover {
+    background-color: #e66410;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
+}
+
+.confirm-button:active {
+    background-color: #cc5a0f;
+    transform: translateY(2px);
+    box-shadow: none; /* Remove shadow when active */
+}   
+/* ========================= */
+/* Order Review Section */
+/* ========================= */
+.order-review {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ff7e1a;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.order-review:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.order-review h2 {
+    color: #ff7e1a;
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-family: 'Arial', sans-serif;
+}
+
+.order-review .order-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.order-review .order-item:hover {
+    background-color: #f9f9f9;
+}
+
+.order-review .order-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-review .order-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.order-review .order-rating {
+    font-size: 16px;
+    color: #ff7e1a;
+}
+
+.order-review .order-date,
+.order-review .order-duration {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.order-review hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* ========================= */
+/* User Reviews Section */
+/* ========================= */
+.user-reviews h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.review {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #ff7e1a;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.review p {
+    font-size: 15px;
+    color: #555;
+}
+
+.review span {
+    color: #ff7e1a;
+    font-weight: bold;
+}
+
+.view-more {
+    color: #ff7e1a;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+/* ========================= */
+/* Price Summary Section */
+/* ========================= */
+.price-summary {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.price-summary div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.price-summary .total {
+    font-weight: bold;
+    color: #ff7e1a;
+    font-size: 20px;
+}
