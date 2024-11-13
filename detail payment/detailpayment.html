@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Payment Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <div class="step-indicator">
+          <div class="step active">
+              <div class="step-circle">1</div>
+              <span class="step-label">Travel Detail</span>
+          </div>
+          <div class="step active">
+              <div class="step-circle">2</div>
+              <span class="step-label">Payment Detail</span>
+          </div>
+          <div class="step">
+              <div class="step-circle">3</div>
+              <span class="step-label">Order Processed</span>
+          </div>
+        </div>
+        
+        <form class="payment-form">
+          <h2>Payment Details</h2>
+          <label for="payer-name">Name:</label>
+          <input type="text" id="payer-name" name="payer-name" required />
+
+          <label for="transaction-ref">Transaction Reference:</label>
+          <input type="text" id="transaction-ref" name="transaction-ref" required />
+
+          <label for="payment-date">Date:</label>
+          <input type="date" id="payment-date" name="payment-date" required />
+
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" required />
+
+          <label for="payment-method">Payment Method:</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="bank_transfer">Bank Transfer</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="e_wallet">E-Wallet</option>
+          </select>
+
+          <label for="bank">Select Bank:</label>
+          <select id="bank" name="bank" required>
+            <option value="" disabled selected>Select your bank</option>
+            <option value="bca">BCA</option>
+            <option value="bni">BNI</option>
+            <option value="bri">BRI</option>
+            <option value="mandiri">Mandiri</option>
+            <option value="cimb_niaga">CIMB Niaga</option>
+            <option value="permata">Permata</option>
+            <!-- Add more banks as needed -->
+          </select>
+
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="3" placeholder="Brief description of the payment..."></textarea>
+          
+          <button type="submit">Submit Payment</button>
+        </form>
+      </div>
+    </div>
+            <!-- Existing form content goes here -->
+        </div>
+        <div class="right-side">
+            <h3>Payment Instructions</h3>
+            <p>Please follow these steps to complete your payment:</p>
+            <ol>
+                <li>Enter your full name as it appears on your bank account.</li>
+                <li>Use the transaction reference number provided in the confirmation email.</li>
+                <li>Select the date of your transaction.</li>
+                <li>Ensure the amount matches the total shown on your invoice.</li>
+                <li>Select your payment method. We accept bank transfers and credit cards.</li>
+            </ol>
+            <p>If you have any questions, please contact our support team at <strong>support@example.com</strong>.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
