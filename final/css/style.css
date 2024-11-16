@@ -1,0 +1,299 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Primary */
+.btn-outline-primary {
+    color: #f97316;
+    background-color: white;
+    border-color: #f97316;
+}
+
+.btn-outline-primary:hover {
+    background-color: #f97316;
+    border-color: #f97316;
+    color: white;
+}
+
+.btn-outline-primary:active {
+    background-color: #f97316 !important;
+    border-color: #f97316 !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: #f97316;
+    border-color: #f97316;
+    color: white;
+}
+
+.btn-primary:active {
+    color: #f97316 !important;
+    background-color: white !important;
+    border-color: #f97316 !important;
+}
+
+.btn-primary:hover {
+    color: #f97316;
+    background-color: white;
+    border-color: #f97316;
+}
+
+.arrow {
+    font-size: 30px;
+    font-style: bold;
+}
+
+
+
+.highlight {
+    color: #f97316
+}
+
+/* Card */
+.display-kos .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.display-kos .card:hover {
+    transform: translateY(-5px);
+}
+
+.display-kos .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.display-kos .rating {
+    color: gold;
+}
+
+.display-kos .card-title,
+.display-kos .card-text {
+    margin-bottom: 10px;
+}
+
+.display-kos .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* FAQ */
+.faq-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.accordion-button {
+    text-align: left;
+}
+
+/* Tentang */
+.tentang-kos {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+/*Hero*/
+.hero {
+    background: url('https://example.com/your-hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+    text-align: left;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/*Navbar*/
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Shadow di bawah navbar */
+    width: 100%;
+    /* Full width */
+}
+
+.navbar .container-fluid {
+    margin: 0 auto;
+    width: 90%;
+    /* Memberi margin hanya pada elemen di dalamnya */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand span:first-child {
+    color: #000000;
+    /* Warna hitam untuk "KOS" */
+}
+
+.navbar-brand span:last-child {
+    color: #f97316;
+    /* Warna orange untuk "KUY" */
+}
+
+.nav-link {
+    color: #000000 !important;
+    font-weight: bold;
+    position: relative;
+    margin: 0 15px;
+    /* Jarak antar tombol */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f97316;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-custom {
+    color: #f97316;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 2px solid #f97316;
+    margin-left: 15px;
+    /* Jarak untuk tombol "Masuk" */
+}
+
+.btn-custom:hover {
+    background-color: #f97316;
+    color: #ffffff;
+}
+
+
+
+/*Footer*/
+.footer {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer h5 {
+    font-weight: bold;
+    color: #000;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer .brand span:first-child {
+    font-weight: bold;
+    color: #000;
+}
+
+.footer .brand span:last-child {
+    font-weight: bold;
+    color: #f97316;
+}
+
+.footer .social-icons a {
+    font-size: 20px;
+    color: #000;
+    margin-right: 10px;
+}
+
+.footer .bottom-bar {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .col-lg-3 {
+    padding-left: 15px;
+    /* Menambah jarak kiri */
+    padding-right: 15px;
+    /* Menambah jarak kanan */
+}
+
+.footer .desKos {
+    padding-left: 15px;
+    /* Menambah jarak kiri */
+    padding-right: 50px;
+    /* Menambah jarak kanan */
+}
+
+
+/* display kos */
+.card-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card-horizontal img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.display-kos-page .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pagination .page-link {
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #f97316;
+    border-color: #f97316;
+}
+
+.display-kos-hal .card-img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+}
